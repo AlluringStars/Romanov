@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Card</title>
+	<link rel="stylesheet" href="card.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+
+	<div class="card">
+		<div class="head">
+			<button class="star">
+				<i class="emptyStar far fa-star"></i>
+				<i class="fullStar fas fa-star"></i>
+			</button>
+			
+		</div>
+		<div class="avatar">
+			<a href="#" class="acc">
+				<i class="fas fa-user-friends"></i>
+			</a>
+		</div>
+		<div class="mainInf">
+			<h1 class="name">Анна Викторовна</h1>
+			<p>Пн-Сб с 9:00 до 19:00</p>
+		</div>
+		<div class="contact">
+			<p class="phoneNum">8-800-000-00-00</p>
+			<p class="eMail">Yellow_K_Fox@bk.ru</p>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function (){
+			var star = $('.star');
+			var star_active = $('.star_active');
+
+			var menu = $('.menu');
+			var menuBlock = $('.menuBlock');
+			var menuBlock_active = $('.menuBlock_active');
+
+			star.click(function () {
+				star.toggleClass('star_active');
+			});
+
+			star_active.click(function () {
+				star.removeClass('star_active');
+			});
+
+			menu.click(function () {
+				menuBlock.toggleClass('menuBlock_active');
+			});
+		});
+	</script>
+	
+</body>
+</html>
